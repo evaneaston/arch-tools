@@ -1,0 +1,9 @@
+[Unit]
+Description=Perform rate checking against all mirrors as user %USER%:%GROUP%.
+
+[Service]
+User=%USER%
+Group=%GROUP%
+ExecStart=bash -c "/usr/bin/rate-mirrors arch | tee /home/%USER%/.mirrorlist.ranked"
+Type=oneshot
+

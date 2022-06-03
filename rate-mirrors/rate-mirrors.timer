@@ -1,0 +1,12 @@
+[Unit]
+Description=Update mirrors daily
+
+[Timer]
+Unit=rate-mirrors-apply.service
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=1h
+
+[Install]
+WantedBy=timers.target
+
