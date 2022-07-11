@@ -41,4 +41,6 @@ installAurPackages() {
         echo "Usage: ${SCRIPT_FULL_PATH} <package-names-space-separated>"
         exit 1
     fi
+
+    yay -S "$@"
 }
